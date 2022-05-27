@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BULMA CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <script>
+    const uri = {{url_for('index') | tojson}};
+    setTimeout(() => window.location.replace(uri), 1000);
+    </script>
+    
+    <title>ToPoLoCo</title>
+  </head>
+  
+  <body>
+    {% block content %}
+
+    <section class="hero is-danger is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title" is-size-1>
+            {{message}}
+          </p>
+          <p class="subtitle is-size-3">
+            Je hebt {{number}} levens!
+          </p>
+        </div>
+      </div>
+    </section>
+        
+    {% endblock %}
+  </body>
+
+</html>

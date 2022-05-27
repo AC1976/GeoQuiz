@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+    <title>Geo Gaaf</title>
+
+</head>
+
+<body>
+
+    {% block content %}
+
+<br>
+
+    <div class="container is-fluid">
+
+      <input class="input is-link" type="text" value="{{player}}, wat is de hoofdstad van...">
+
+    </div>
+
+<br>
+
+    <div class="container is-fluid">
+
+      <input class="input is-success" type="text" value="{{country}}?" readonly>
+
+    </div>
+
+<br>
+
+    <div class="container is-fluid">
+                      
+        <button class="buttons are-large">
+                    
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-primary is-fullwidth" name="sub" type="submit" value="{{a0}}">{{a0}}</button>
+        </form>   
+        <br>
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-link is-fullwidth" name="sub" type="submit" value="{{a1}}">{{a1}}</button>
+        </form>
+        <br>
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-info is-fullwidth" name="sub" type="submit" value="{{a2}}">{{a2}}</button>
+        </form>
+        <br>
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-success is-fullwidth" name="sub" type="submit" value="{{a3}}">{{a3}}</button>
+        </form>
+        <br>
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-warning is-fullwidth" name="sub" type="submit" value="{{a4}}">{{a4}}</button>
+        </form>
+        <br>
+        <form action="{{ url_for('answer') }}" method="post">
+        <button class="button is-danger is-fullwidth" name="sub" type="submit" value="{{a5}}">{{a5}}</button>
+        </form>    
+            
+        </button>
+            
+    </div>
+
+<br>
+
+    <div class="container is-fluid">
+    
+        <progress class="progress is-primary is-large" value="{{countlist}}" max="198"></progress>
+        <button class="button is-info is-fullwidth">Je hebt al {{countlist}} van de 198 landen beantwoord en nog {{lifes}} levens over. Hou vol!</button>
+    </div>
+
+    {% endblock %}
+
+</body>
+
+</html>
