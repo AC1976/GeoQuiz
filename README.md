@@ -13,3 +13,4 @@ GeoQuizData:
 
 The second component is a Flask app, styled with Buma CSS, which is mostly UI to show the multiple choice quiz game and take input. The game logic (remaining questions, remaining lifes) is embedded in the Flask app and routes, which works, but seems clunky (to me).
 
+The HTML files need to be put in a 'templates' directory per Flask conventions.
